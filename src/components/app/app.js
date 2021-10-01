@@ -83,7 +83,7 @@ export default class App extends Components {
         });
     }
 
-    searchPost(item, term) {
+    searchPost(items, term) {
         if (term.length === 0) {
             return items
         }
