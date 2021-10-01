@@ -1,14 +1,14 @@
-import React, {Components} from 'react';
+import React, {Component} from 'react';
 
 import AppHeader from '../app-header';
-import SearchPanel from '../app-header';
+import SearchPanel from '../search-panel';
 import PostStatusFilter from '../post-status-filter';
 import PostList from '../post-list';
 import PostAddForm from '../post-add-form';
 
 import './app.css';
 
-export default class App extends Components {
+export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -69,7 +69,7 @@ export default class App extends Components {
         });
     }
 
-    omToggleLiked(id) {
+    onToggleLiked(id) {
         this.setState(({data}) => {
             const index = data.findIndex(elem => elem.id === id);
             
